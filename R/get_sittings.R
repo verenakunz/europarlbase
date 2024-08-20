@@ -6,8 +6,8 @@
 get_sittings <- function(key = access_token) {
 
   ## Check if access token object exists in environment
-  if(exists(access_token) == FALSE) {
-    stop ("Have you specified the access token?")
+  if (missing(key)) {
+    stop("Access token is missing. Have you specified the access token correctly? Check the package documentation for information on how to specify the access token.")
   }
 
   ## Build URL to sitting data
