@@ -3,10 +3,10 @@
 #' `get_sittings()` gets the plenary sittings data from EuroParlBase.
 #' @export
 
-get_sittings <- function(access_token = access_token) {
+get_sittings <- function(key = access_token) {
 
   ## Build URL to sitting data
-  url <- paste0("https://dataverse.harvard.edu/api/access/datafile/10247109?key=", access_token)
+  url <- paste0("https://dataverse.harvard.edu/api/access/datafile/10247109?key=", key)
 
   ## Read data
   connect <- url(url)
