@@ -3,3 +3,4 @@
 export(add)
 export(get_debate_contributions)
 export(get_meps)
+export(get_sittings)
