@@ -19,8 +19,23 @@ You can install the development version of europarlbase from
 [GitHub](https://github.com/) with:
 
 ``` r
-# install.packages("devtools")
-devtools::install_github("verenakunz/europarlbase")
+# install.packages("remotes")
+remotes::install_github("verenakunz/europarlbase")
+```
+
+Note that if you don’t have the {remotes} package installed on your
+machine, you have to install it before being able to install the
+europarlbase package.
+
+## Accessing EuroParlBase
+
+To access EuroParlBase you currently need an access token. Specify the
+access token as follows before calling any {europarlbase} functions to
+be able to access the database:
+
+``` r
+## Specify access token
+access_token <- "<insert access token here>"
 ```
 
 ## Example
