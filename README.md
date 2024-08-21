@@ -3,20 +3,12 @@
 
 # europarlbase
 
-<!-- badges: start -->
-
-[![Lifecycle:
-experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
-[![CRAN
-status](https://www.r-pkg.org/badges/version/europarlbase)](https://CRAN.R-project.org/package=europarlbase)
-<!-- badges: end -->
-
 The goal of europarlbase is to …
 
 ## Installation
 
-You can install the development version of europarlbase from
-[GitHub](https://github.com/) with:
+You can install the development version of {europarlbase} from
+[GitHub](https://github.com/verenakunz/europarlbase) with:
 
 ``` r
 # install.packages("remotes")
@@ -27,15 +19,21 @@ Note that if you don’t have the {remotes} package installed on your
 machine, you have to install it before being able to install the
 europarlbase package.
 
+To use {europarlbase}, load the package with:
+
+``` r
+library(europarlbase)
+```
+
 ## Accessing EuroParlBase
 
-To access EuroParlBase you currently need an access token. Specify the
-access token as follows before calling any {europarlbase} functions to
-be able to access the database:
+To access EuroParlBase you currently need an access token. To be able to
+access the database, specify the access token as follows before calling
+any {europarlbase} functions:
 
 ``` r
 ## Specify access token
-access_token <- "<insert access token here>"
+access_token <- "<insert access token>"
 ```
 
 ## Example
