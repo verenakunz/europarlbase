@@ -1,0 +1,22 @@
+#' Get individual roll-call voting decisions
+#'
+#' `get_votes()` gets MEPs' roll-call voting decisions from EuroParlBase.
+#' @export
+
+get_votes <- function(key = access_token) {
+
+  ## Check if access token object exists in environment
+  if (missing(key)) {
+    stop("\n\nAccess token is missing. Have you specified the access token correctly? Check the package documentation for information on how to specify the access token.")
+  }
+
+  ## Build URL to sitting data
+  url <- paste0("https://dataverse.harvard.edu/api/access/datafile/10469029?key=", key)
+
+  ## Read data
+  connect <- url(url)
+  on.exit(close(connect))
+  data <- readRDS(connect)
+  return(data)
+
+}
