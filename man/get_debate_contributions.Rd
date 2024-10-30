@@ -4,11 +4,8 @@
 \alias{get_debate_contributions}
 \title{Get debate contributions}
 \usage{
-get_debate_contributions(access_token = access_token)
-}
-\value{
-A data frame of debate contributions and corresponding meta data.
+get_debate_contributions(access_token = NULL, term = NULL, corpus = "original")
 }
 \description{
-\code{get_debate_contributions()} gets the debate data from EuroParlBase.
+\code{get_debate_contributions()} gets debate contributions from EuroParlBase.
 }

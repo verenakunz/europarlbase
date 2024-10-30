@@ -4,7 +4,7 @@
 \alias{get_votes}
 \title{Get individual roll-call voting decisions}
 \usage{
-get_votes(access_token = NULL)
+get_votes(access_token = NULL, term = NULL)
 }
 \description{
 \code{get_votes()} gets MEPs' roll-call voting decisions from EuroParlBase.
