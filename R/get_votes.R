@@ -3,7 +3,7 @@
 #' `get_votes()` gets MEPs' roll-call voting decisions from EuroParlBase.
 #' @export
 
-get_votes <- function(access_token = NULL, term = NULL) {
+get_votes <- function(access_token = NULL) {
 
   ## Check if access token object exists in user's global environment
   if (is.null(access_token)) {
@@ -14,4 +14,12 @@ get_votes <- function(access_token = NULL, term = NULL) {
     }
   }
 
+  ## Build URL to sitting data
+  url <- paste0("https://dataverse.harvard.edu/api/access/datafile/10676742?key=", access_token)
+
+  ## Read data
+  connect <- url(url)
+  on.exit(close(connect))
+  data <- readRDS(connect)
+  return(data)
 }

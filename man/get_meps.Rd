@@ -4,8 +4,8 @@
 \alias{get_meps}
 \title{Get socio-demographic MEP data}
 \usage{
-get_meps(access_token = access_token)
+get_meps(access_token = NULL)
 }
 \description{
-\code{get_meps()} gets socio-demographic MEP data from EuroParlBase.
+\code{get_meps()} gets the socio-demographic MEP data from EuroParlBase.
 }

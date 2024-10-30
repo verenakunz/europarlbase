@@ -2,6 +2,8 @@
 
 export(get_attendance)
 export(get_debate_contributions)
+export(get_mep_political)
+export(get_mep_social)
 export(get_meps)
 export(get_sittings)
 export(get_vote_infos)
