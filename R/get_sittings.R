@@ -15,7 +15,7 @@ get_sittings <- function(access_token = NULL) {
   }
 
   ## Build URL to sitting data
-  url <- paste0("https://dataverse.harvard.edu/api/access/datafile/10247109?key=", key)
+  url <- paste0("https://dataverse.harvard.edu/api/access/datafile/10247109?key=", access_token)
 
   ## Read data
   connect <- url(url)
