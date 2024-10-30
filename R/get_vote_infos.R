@@ -15,7 +15,7 @@ get_vote_infos <- function(access_token = NULL, term = NULL) {
   }
 
   ## Build URL to sitting data
-  url <- paste0("https://dataverse.harvard.edu/api/access/datafile/10676739?key=", key)
+  url <- paste0("https://dataverse.harvard.edu/api/access/datafile/10676739?key=", access_token)
 
   ## Read data
   connect <- url(url)
