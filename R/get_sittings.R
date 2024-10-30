@@ -3,7 +3,7 @@
 #' `get_sittings()` gets the plenary sittings data from EuroParlBase.
 #' @export
 
-get_sittings <- function(access_token = NULL, term = NULL) {
+get_sittings <- function(access_token = NULL) {
 
   ## Check if access token object exists in user's global environment
   if (is.null(access_token)) {
@@ -21,10 +21,5 @@ get_sittings <- function(access_token = NULL, term = NULL) {
   connect <- url(url)
   on.exit(close(connect))
   data <- readRDS(connect)
-
-  if (!is.null(term)) {
-    data <- filter(data, term == {{ term }})
-  }
-
   return(data)
 }

@@ -4,7 +4,7 @@
 \alias{get_sittings}
 \title{Get plenary sitting data}
 \usage{
-get_sittings(access_token = NULL, term = NULL)
+get_sittings(access_token = NULL)
 }
 \description{
 \code{get_sittings()} gets the plenary sittings data from EuroParlBase.

@@ -4,7 +4,6 @@
 #' @export
 
 get_debate_contributions <- function(access_token = NULL,
-                                     term = NULL,
                                      corpus = "original") {
 
   ## Check if access token object exists in user's global environment
@@ -23,10 +22,6 @@ get_debate_contributions <- function(access_token = NULL,
   connect <- url(url)
   on.exit(close(connect))
   data <- readRDS(connect)
-
-  if (!is.null(term)) {
-    data <- filter(data, term == {{ term }})
-  }
 
   if (corpus == "original") {
     data <- filter(data, corpus == "original")

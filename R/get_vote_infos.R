@@ -3,7 +3,7 @@
 #' `get_vote_infos()` gets information on the roll-call votes from EuroParlBase.
 #' @export
 
-get_vote_infos <- function(access_token = NULL, term = NULL) {
+get_vote_infos <- function(access_token = NULL) {
 
   ## Check if access token object exists in user's global environment
   if (is.null(access_token)) {
@@ -21,11 +21,6 @@ get_vote_infos <- function(access_token = NULL, term = NULL) {
   connect <- url(url)
   on.exit(close(connect))
   data <- readRDS(connect)
-
-  if (!is.null(term)) {
-    data <- filter(data, term == {{ term }})
-  }
-
   ## Return data
   return(data)
 

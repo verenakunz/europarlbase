@@ -4,7 +4,7 @@
 \alias{get_vote_infos}
 \title{Get information on roll-call votes}
 \usage{
-get_vote_infos(access_token = NULL, term = NULL)
+get_vote_infos(access_token = NULL)
 }
 \description{
 \code{get_vote_infos()} gets information on the roll-call votes from EuroParlBase.

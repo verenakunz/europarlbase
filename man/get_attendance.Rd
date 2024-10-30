@@ -4,7 +4,7 @@
 \alias{get_attendance}
 \title{Get attendance data}
 \usage{
-get_attendance(access_token = NULL, term = NULL)
+get_attendance(access_token = NULL)
 }
 \description{
 \code{get_attendance()} gets the attendance data from EuroParlBase.
