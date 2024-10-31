@@ -23,11 +23,7 @@ get_debate_contributions <- function(access_token = NULL,
   on.exit(close(connect))
   data <- readRDS(connect)
 
-  if (corpus == "original") {
-    data <- filter(data, corpus == "original")
-  } else {
-    data <- filter(data, corpus == {{ corpus }})
-  }
+  data <- filter(data, corpus == "original")
 
   ## Return data
   return(data)
