@@ -4,7 +4,7 @@
 \alias{get_debate_contributions}
 \title{Get debate contributions}
 \usage{
-get_debate_contributions(access_token = NULL, corpus = "original")
+get_debate_contributions(access_token = NULL)
 }
 \description{
 \code{get_debate_contributions()} gets debate contributions from EuroParlBase.

@@ -3,8 +3,7 @@
 #' `get_debate_contributions()` gets debate contributions from EuroParlBase.
 #' @export
 
-get_debate_contributions <- function(access_token = NULL,
-                                     corpus = "original") {
+get_debate_contributions <- function(access_token = NULL) {
 
   ## Check if access token object exists in user's global environment
   if (is.null(access_token)) {
