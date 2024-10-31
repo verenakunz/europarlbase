@@ -1,70 +1,60 @@
-
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
 # europarlbase
 
-The goal of europarlbase is to …
+The goal of europarlbase is to facilitate access to EuroParlBase, a linked database of European Parliament data. Note that the package is still in its development version. If you encounter any problems, please reach out.
 
 ## Installation
 
-You can install the development version of {europarlbase} from
-[GitHub](https://github.com/verenakunz/europarlbase) with:
+You can install the development version of {europarlbase} from [GitHub](https://github.com/verenakunz/europarlbase) with:
 
 ``` r
 # install.packages("remotes")
 remotes::install_github("verenakunz/europarlbase")
 ```
 
-Note that if you don’t have the {remotes} package installed on your
-machine, you have to install it before being able to install the
-europarlbase package.
+Note that if you don't have the {remotes} package installed on your machine, you have to install it before being able to install the europarlbase package.
 
-To use {europarlbase}, load the package with:
+To use {europarlbase}, load the package with: 
 
-``` r
+```{r}
 library(europarlbase)
 ```
 
+
 ## Accessing EuroParlBase
 
-To access EuroParlBase you currently need an access token. To be able to
-access the database, specify the access token as follows before calling
-any {europarlbase} functions:
+To access EuroParlBase you currently need an access token. Please reach out to me for the access token. To be able to access the database, specify the access token as follows before calling any {europarlbase} functions:
 
-``` r
+```{r}
 ## Specify access token
 access_token <- "<insert access token>"
 ```
 
-## Example
 
-This is a basic example which shows you how to solve a common problem:
+## Getting the data
 
-``` r
-library(europarlbase)
-## basic example code
+```{r}
+## Get sitting data
+sittings <- get_sittings()
+
+## Get socio-demographic MEP data
+mep_infos <- get_meps()
+
+## Get political MEP data
+mep_political <- get_mep_political()
+
+## Get social MEP data
+mep_social <- get_mep_social()
+
+## Get individual voting decisions
+rcv_decisions <- get_votes()
+
+## Get roll-call vote infos
+rcv_infos <- get_vote_infos()
+
+## Get debate contributions
+debate_contributions <- get_debate_contributions() # currently needs to have timeout option set to a sufficiently high level to be able to download full data
 ```
 
-What is special about using `README.Rmd` instead of just `README.md`?
-You can include R chunks like so:
 
-``` r
-summary(cars)
-#>      speed           dist       
-#>  Min.   : 4.0   Min.   :  2.00  
-#>  1st Qu.:12.0   1st Qu.: 26.00  
-#>  Median :15.0   Median : 36.00  
-#>  Mean   :15.4   Mean   : 42.98  
-#>  3rd Qu.:19.0   3rd Qu.: 56.00  
-#>  Max.   :25.0   Max.   :120.00
-```
-
-You’ll still need to render `README.Rmd` regularly, to keep `README.md`
-up-to-date. `devtools::build_readme()` is handy for this.
-
-You can also embed plots, for example:
-
-<img src="man/figures/README-pressure-1.png" width="100%" />
-
-In that case, don’t forget to commit and push the resulting figure
-files, so they display on GitHub and CRAN.
